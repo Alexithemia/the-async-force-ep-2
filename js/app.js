@@ -34,7 +34,6 @@ window.onload = function () {
 
       //if-else statement seperating operations depending on user input
       if (type === 'people') {
-
         //creating and appending new html elements with included data
         let nameh2 = document.createElement('h2');
         nameh2.innerHTML = response.name;
@@ -56,9 +55,7 @@ window.onload = function () {
           speciesP.innerHTML = 'Species: ' + speciesResponse.name;
           contain.appendChild(speciesP);
         }
-
       } else if (type === 'planets') {
-
         //creating and appending new html elements with included data
         let nameh2 = document.createElement('h2');
         nameh2.innerHTML = response.name;
@@ -77,7 +74,6 @@ window.onload = function () {
         contain.appendChild(filmsLi);
 
         response.films.forEach(filmUrl => {
-
           //new xhr request for further data for each film
           let filmsReq = new XMLHttpRequest();
           filmsReq.addEventListener('load', setFilms);
@@ -92,9 +88,7 @@ window.onload = function () {
           filmP.innerHTML = filmsResponse.title;
           filmsLi.appendChild(filmP);
         }
-
       } else if (type === 'starships') {
-
         //creating and appending new html elements with included data
         let nameh2 = document.createElement('h2');
         nameh2.innerHTML = response.name;
@@ -113,7 +107,6 @@ window.onload = function () {
         contain.appendChild(filmsLi);
 
         response.films.forEach(filmUrl => {
-
           //new xhr request for further data for each film
           let filmsReq = new XMLHttpRequest();
           filmsReq.addEventListener('load', setFilms);
